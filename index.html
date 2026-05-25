@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Nota Pembayaran</title>
+<style>
+    
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    padding: 20px;
+}
+
+.nota {
+    max-width: 380px;
+    background: #fff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.logo {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #0562b2;
+}
+
+.store {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.tagline {
+    text-align: center;
+    font-size: 13px;
+    color: #555;
+}
+
+.judul {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.produk {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+hr {
+    border: none;
+    
+    margin: 15px 0;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 6px 0;
+}
+
+.footer {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+    color: #666;
+}
+
+input {
+    width: 60%;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    text-align: right;
+}
+
+button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background: #064e8d;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@media print {
+    button {
+        display: none;
+    }
+    body {
+        background: rgb(249, 241, 241);
+    }
+}
+.logo-wrapper {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#logoPreview {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    opacity: 0.8;
+}
+.logo-wrapper {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.logo-wrapper img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
+    display: none; /* awalnya disembunyikan */
+    margin: auto;
+}
+
+/* input file DISEMBUNYIKAN TOTAL */
+.logo-wrapper input {
+    display: none;
+}
+/* Rapatkan header struk */
+.store {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.tagline {
+    margin: 2px 0 4px 0;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+.judul {
+    margin: 6px 0 6px 0;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+/* Produk (judul besar) */
+.produk {
+    margin: 0;
+}
+
+.produk h1 {
+    margin: 4px 0 8px 0;  /* INI YANG BIKIN DEKET */
+    font-size: 18px;
+    line-height: 1.2;
+}
+.garis-putus {
+    width: 100%;
+    border-top: 1px dashed #000; /* HITAM, PASTI KELIHATAN */
+    margin: 8px 0;
+}
+
+</style>
+</head>
+<body>
+
+<div class="nota">
+
+    <!-- LOGO -->
+    <div class="logo-wrapper">
+        <img id="logoPreview" alt="Logo">
+        <input type="file" id="logoInput" accept="image/*">
+    </div>
+    <div class="store">KASHIKI STORE</div>
+    <div class="tagline">Cepat, Terjangkau, dan Terpercaya</div>
+    <div class="judul">STRUK PEMBAYARAN</div>
+    <div class="produk">
+        <h1>DANA 50.000</h1>
+    </div>
+
+<div class="produk">
+</div>
+
+<div class="garis-putus"></div>
+
+  <table class="struk-table">
+    <tr>
+        <td class="label">TANGGAL</td>
+        <td class="colon">:</td>
+        <td class="value highlight">11 Apr 2026 19:56</td>
+    </tr>
+    <tr>
+        <td class="label">ID TX</td>
+        <td class="colon">:</td>
+        <td class="value highlight">202604111012142001010016690460267285</td>
+    </tr>
+    <tr>
+        <td class="label">NAMA</td>
+        <td class="colon">:</td>
+        <td class="value highlight">A....a Pam...as</td>
+    </tr>
+    <tr>
+        <td class="label">NOMOR</td>
+        <td class="colon">:</td>
+        <td class="value highlight">0882005129335</td>
+    </tr>
+    <tr>
+        <td class="label">HARGA</td>
+        <td class="colon">:</td>
+        <td class="value highlight">Rp50.000</td>
+    </tr>
+    <tr>
+        <td class="label">layanan</td>
+        <td class="colon">:</td>
+        <td class="value highlight">Rp3.000</td>
+    </tr>
+    <tr>
+        <td class="label">TOTAL</td>
+        <td class="colon">:</td>
+        <td class="value highlight">Rp53.000</td>
+    </tr>
+</table>
+
+<div class="garis-putus"></div>
+
+<div class="footer">
+    
+</div>
+
+    <div class="footer">
+        "Terimakasih Telah melakukan TOP UP to KASHIKI_STORE"
+    </div>
+
+    <button onclick="downloadImage()">Download Gambar</button>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+<script>
+function downloadImage() {
+    const nota = document.querySelector('.nota');
+
+    if (!nota) {
+        alert('Elemen nota tidak ditemukan');
+        return;
+    }
+
+    html2canvas(nota, {
+        scale: 2,
+        backgroundColor: "#ffffff"
+    }).then(canvas => {
+        const link = document.createElement('a');
+        link.download = 'struk-pembayaran.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+    }).catch(err => {
+        console.error(err);
+        alert('Gagal membuat gambar');
+    });
+}
+</script>
+
+<script>
+
+</script>
+<script>
+const logoPreview = document.getElementById('logoPreview');
+const logoInput = document.getElementById('logoInput');
+
+logoPreview.addEventListener('click', () => {
+    logoInput.click();   // INI YANG MEMUNCULKAN FILE PICKER
+});
+
+logoInput.addEventListener('change', function () {
+    const file = this.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function (e) {
+        logoPreview.src = e.target.result;
+        logoPreview.style.display = 'block';
+    };
+    reader.readAsDataURL(file);
+});
+</script>
+<script>
+document.getElementById('logoPreview').addEventListener('click', () => {
+    document.getElementById('logoInput').click();
+});
+
+document.getElementById('logoInput').addEventListener('change', function () {
+    const file = this.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function (e) {
+        const img = document.getElementById('logoPreview');
+        img.src = e.target.result;
+        img.style.display = 'block';
+    };
+    reader.readAsDataURL(file);
+});
+.struk-table .highlight {
+    font-family: "Courier New", monospace; /* beda dari yang lain */
+    font-weight: bold;
+    letter-spacing: 0.3px;
+}
+
+</script>
+
+</body>
+</html>
